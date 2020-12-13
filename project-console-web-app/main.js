@@ -1,0 +1,21 @@
+var fname="abhimanyu";
+var lname="mukherjee";
+var date= new Date();
+var no1=10;
+var no2=5;
+var rfname= fname.replace("abhimanyu","antariksh");
+var rlname= fname.replace("mukherjee","is my brother");
+var full_name=fname.concat(lname);
+var full_rname=rfname.concat(rlname)
+var nomultiplication=no1*no2;
+var noaddition=no1+no2;
+var nosubstraction=no1-no2;
+var nodivision=no1/no2;
+console.log("My Console Project");
+console.log(date.getDate());
+console.log(full_name);
+console.log(full_rname);
+console.log(nomultiplication);
+console.log(noaddition);
+console.log(nosubstraction);
+console.log(nodivision);
