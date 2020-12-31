@@ -1,0 +1,15 @@
+.input{
+    width: 350px;
+    height: 70px;
+    margin: 50px;
+    font-size: 25px;
+}
+#inputlist{
+    list-style-type: none;
+}
+#make{
+    width: 250px;
+    height: 70px;
+    margin: 100px;
+    font-size: 20px;
+}
