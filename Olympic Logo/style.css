@@ -1,0 +1,21 @@
+
+h1
+{
+	color: red; 
+	font-size: 40px;
+}
+.body_backgorund {
+	background-image: url('https://images-na.ssl-images-amazon.com/images/I/41eepf26GcL._AC_SX522_.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#myCanvas{
+   border: 2px solid black;
+}
+#clear{
+	margin-bottom:50px;
+	width:150px;
+	height:50px; 
+	font-size:20px;
+}
