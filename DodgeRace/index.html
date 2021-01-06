@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	background-image: url("https://media4.giphy.com/media/jQhCPAqbcvFSoO05At/giphy.gif");
+    background-position: center;
+    background-size: cover;
+}
+#myCanvas1
+{
+	border-width:10px;
+	background-color: white; 
+	border-style:ridge;
+}
+#myCanvas2
+{
+	border-width:10px;
+	background-color: white; 
+	border-style:ridge;
+}
+.title{
+	font-size: 75px;
+	color: white;
+	font-family: 'Bangers', cursive;
+	height: 100px;
+	width: 300px;
+	border-radius: 20px;
+	background-color: red;
+
+}
+.subtitle{
+	color: white;
+	font-family: 'Bangers', cursive;
+}
+.note{
+	color: white;
+}
+.p1controls,.p2controls{
+	color: white;
+}
+</style>		
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">	
+<title>Moving Rover On</title>
+</head>
+<body onload="add()">
+<center>
+<h1 class="title">DODGE</h1>
+<h2 class="subtitle"><img src="race.jpg"></h2>
+<h3 class="p1controls">
+	<b>Player 1 : </b> A and D Keys
+</h3>
+<h3 class="p2controls">
+	<b>Player 2 : </b> Arrow Keys
+</h3>
+<h4 class="note">
+	<b>NOTE : </b> IF CARS ARE NOT VISIABLE PRESS ANY ARROW KEY
+</h4>
+<canvas width="400px" height="600px;" id="myCanvas1">
+</canvas>
+<canvas width="400px" height="600px;" id="myCanvas2">
+</canvas>
+<br>
+<h4 class="note"><b>NOTE:</b>If cars are not visible then press any arrow key</h4>
+</center>
+<script src="main.js">
+</script>
+</body>
+</html>
