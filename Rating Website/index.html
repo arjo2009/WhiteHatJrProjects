@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <script src="other.js"></script>
+    <script src="main.js" async></script>
+    <div class="head">
+        <center>
+            <p class="header-txt">THE RATING SITE</p>
+            <label class="header-star" id="star-1">⭐</label>
+            <label class="header-star" id="star-2">⭐</label>
+            <label class="header-star" id="star-3">⭐</label>
+            <label class="header-star" id="star-4">⭐</label>
+            <label class="header-star" id="star-5">⭐</label>
+        </center>
+   </div>
+   <br><br><br><br><br>
+   <div class="body">
+    <div class="ir-body">
+        <center>
+            <div class="sec-header-div">
+             <label class="sec-header">I</label>
+             <label class="sec-header">M</label>
+             <label class="sec-header">A</label>
+             <label class="sec-header">G</label>
+             <label class="sec-header">E</label>
+             <label class="sec-header" style="margin-right: 15px;"> </label>
+             <label class="sec-header">R</label>
+             <label class="sec-header">E</label>
+             <label class="sec-header">C</label>
+             <label class="sec-header">O</label>
+             <label class="sec-header">G</label>
+             <label class="sec-header">N</label>
+             <label class="sec-header">I</label>
+             <label class="sec-header">T</label>
+             <label class="sec-header">I</label>
+             <label class="sec-header">O</label>
+             <label class="sec-header">N</label>
+             <label class="sec-header" style="margin-right: 15px;"> </label>
+             <label class="sec-header">R</label>
+             <label class="sec-header">A</label>
+             <label class="sec-header">T</label>
+             <label class="sec-header">I</label>
+             <label class="sec-header">N</label>
+             <label class="sec-header">G</label>
+            </div>          
+         <div class="sign" id="sign-1">
+             <center>
+              <button class="sign-header" onclick="showSign1()">
+                  <h1>THUMBS UP<label id="arrow1">&#10148;</label></h1>               
+              </button>
+             </center>           
+             <div class="sign-body" id="sign1-body">
+              <label>👍   THUMBS UP</label><br>
+              <label class="body-txt">Thumbs up means an indication of satisfaction or approval. It means the customer is happy and satisfied with the product, but still wants to give some advice. On a scale of 1 to 5 it would mean 4.</label>
+             </div>           
+         </div>
+         <div class="sign" id="sign-2">
+             <center>
+              <button class="sign-header" onclick="showSign2()">
+                  <h1>WONDERFULL<label id="arrow2">&#10148;</label></h1>               
+              </button>
+             </center>           
+             <div class="sign-body" id="sign2-body">
+              <label>✌ WONDERFULL / VICTORY</label><br>
+              <label class="body-txt">This means that the product has given the customerinspiring delight, pleasure, or admiration. The product is extremely wonderfull or marvelous, In other words successfull. On a scale of 1 to 5, this would mean 5.</label>
+             </div>           
+         </div>
+         <div class="sign" id="sign-3">
+             <center>
+              <button class="sign-header" onclick="showSign3()">
+                  <h1>THUMBS DOWN<label id="arrow3">&#10148;</label></h1>               
+              </button>
+             </center>           
+             <div class="sign-body" id="sign3-body">
+              <label>👎   THUMBS DOWN</label><br>
+              <label class="body-txt">Thumbs up means an indication of an indication of rejection or failure. It means the customer is not happy or satisfied with the product. On a scale of 1 to 5 it would mean 1 to 3.</label>
+             </div>           
+         </div>   
+         <div class="board">
+             <div class="case">
+                <div class="top-sec"></div>
+                <div style="margin-bottom: 50px; width: 300px; height: 350px;" id="camera">
+                </div>
+                <div id="test"></div>
+                <button class="cpt-btn" id="snap" onclick="takeSnapshot()">
+                    <div class="square"></div>
+                </button>
+             </div> 
+             <div class="polaroid">
+                 <div class="snp-display" id="snapshot"></div>
+             </div>   
+             <button class="identify-btn" id="identify" onclick="identify()">IDENTIFY IMAGE</button>         
+         </div>  
+         <div class="result-div">
+             <div class="emoji">
+                 <img id="emoji-img" style="height: 300px; width: 300px; border: none;outline: none;" src="ques.gif">
+             </div>
+             <div class="rating" id="rating">?</div>
+         </div>      
+         </div>
+   </div>   
+       </center>       
+   </div>
+</body>
+</html>
