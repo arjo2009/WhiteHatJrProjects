@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Case Study - Mobilenet & Wolfram</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="//www.wolframcdn.com/consent/cookie-consent.js" defer="defer" async="async"></script>
+    <script src="main.js"></script>
+</head>
+<body onload="identify()">
+    
+    <div class="head">
+        <center>
+            <label class="header"><img src="logo.svg" class="logo" style="height: 50px; width: 50px;margin-right: 50px;">CASE STUDY<img src="logo.svg" style="height: 50px; width: 50px;margin-left: 50px;" class="logo" ></h1>
+        </center>        
+    </div>    
+    <hr style="height: 5px;width: 90%;background-color: black;">
+    <div class="body">
+        <br><br>
+        <div class="test-area">
+            <br>
+            <label class="ta-header" style="letter-spacing: 15px;margin-bottom: 50px;">TEST IMAGE - </label>
+            <img id="testImg1" src="water bottl.jpg" style="margin-left: 150px;width: 500px;height: 500px;">
+            <hr style="width: 95%;height: 1px;background-color: black;">
+            <div class="results">
+                <label class="ta-result">Output on Mobilenet model - </label><span id="mnResult1" class="result"></span><br>
+                <label class="ta-result">Output on Wolfram project - </label><span id="wmResult1" class="result">cocktail shaker</span>
+            </div>
+            <div class="final-result">
+                <label class="ta-final">MOBILENET IS MORE ACCURATE</label>
+            </div>
+        </div>
+        <div class="test-area">
+            <br>
+            <label class="ta-header" style="letter-spacing: 15px;margin-bottom: 50px;">TEST IMAGE - </label>
+            <img id="testImg2" src="bed.jpg" style="margin-left: 40px;width: 800px;height: 500px;">
+            <hr style="width: 95%;height: 1px;background-color: black;">
+            <div class="results">
+                <label class="ta-result">Output on Mobilnet model - </label><span id="mnResult2" class="result"></span><br>
+                <label class="ta-result">Output on Wolfram project - </label><span id="wmResult1" class="result">bedroom</span>
+            </div>
+            <div class="final-result">
+                <label class="ta-final">WOLFRAM IS MORE ACCURATE</label>
+            </div>
+        </div>
+        <div class="test-area">
+            <br>
+            <label class="ta-header" style="letter-spacing: 15px;margin-bottom: 50px;">TEST IMAGE - </label>
+            <img id="testImg3" src="birs.jpg" style="margin-left: 40px;width: 800px;height: 500px;">
+            <hr style="width: 95%;height: 1px;background-color: black;">
+            <div class="results">
+                <label class="ta-result">Output on Mobilenet model - </label><span id="mnResult3" class="result"></span><br>
+                <label class="ta-result">Output on Wolfram project - </label><span id="wmResult1" class="result">peafowl</span>
+            </div>
+            <div class="final-result">
+                <label class="ta-final">MOBILENET IS MORE ACCURATE</label>
+            </div>
+        </div>
+        <div class="test-area">
+            <br>
+            <label class="ta-header" style="letter-spacing: 15px;margin-bottom: 50px;">TEST IMAGE - </label>
+            <img id="testImg4" src="headpjones.jpg" style="margin-left: 150px;width: 500px;height: 500px;">
+            <hr style="width: 95%;height: 1px;background-color: black;">
+            <div class="results">
+                <label class="ta-result">Output on Mobilenet model - </label><span id="mnResult4" class="result"></span><br>
+                <label class="ta-result">Output on Wolfram project - </label><span id="wmResult1" class="result">steering wheel</span>
+            </div>
+            <div class="final-result">
+                <label class="ta-final">MOBILENET IS MORE ACCURATE</label>
+            </div>
+        </div>
+        <div class="test-area">
+            <br>
+            <label class="ta-header" style="letter-spacing: 15px;margin-bottom: 50px;">TEST IMAGE - </label>
+            <img id="testImg5" src="shoes.jfif" style="margin-left: 150px;width: 300px;height: 300px;">
+            <hr style="width: 95%;height: 1px;background-color: black;">
+            <div class="results">
+                <label class="ta-result">Output on Wolfram Project - </label><span id="mnResult5" class="result"></span><br>
+                <label class="ta-result">Output on Mobilenet model - </label><span id="wmResult1" class="result">claits</span>
+            </div>
+            <div class="final-result">
+                <label class="ta-final">MOBILENET IS MORE ACCURATE</label>
+            </div>
+        </div>
+        <center>
+            <div class="final-result" style="margin-top: 100px;">
+                <label class="fr-letter">M</label>
+                <label class="fr-letter">O</label>
+                <label class="fr-letter">B</label>
+                <label class="fr-letter">I</label>
+                <label class="fr-letter">L</label>
+                <label class="fr-letter">E</label>
+                <label class="fr-letter">N</label>
+                <label class="fr-letter">E</label>
+                <label class="fr-letter" style="margin-right: 30px;">T</label>
+                <label class="fr-letter"> </label>
+                <label class="fr-letter">I</label>
+                <label class="fr-letter" style="margin-right: 30px;">S</label>
+                <label class="fr-letter"> </label>
+                <label class="fr-letter">M</label>
+                <label class="fr-letter">O</label>
+                <label class="fr-letter">R</label>
+                <label class="fr-letter" style="margin-right: 30px;">E</label>
+                <label class="fr-letter"> </label>
+                <label class="fr-letter">A</label>
+                <label class="fr-letter">C</label>
+                <label class="fr-letter">C</label>
+                <label class="fr-letter">U</label>
+                <label class="fr-letter">R</label>
+                <label class="fr-letter">A</label>
+                <label class="fr-letter">T</label>
+                <label class="fr-letter">E</label>
+                <label class="fr-txt">I have tested 5 images and Mobilenet has guessed accurately 4 of them and wolfram has guesssed 1 accurately.</label><br>
+                <label class="fr-txt2"> According to this data Mobilenet is better.</label>
+            </div>
+        </center>         
+    </div>
+</body>
+</html>
