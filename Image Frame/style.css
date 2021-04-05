@@ -1,0 +1,26 @@
+.heading{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
+    box-shadow: 0px 0px 10px black;
+    padding: 20px;
+    height: fit-content;
+    width: fit-content;
+    color: red;
+}
+.btn{
+    width: 300px;
+    height: 80px;
+    font-size: 30px;
+    background-image: linear-gradient(90deg, rgba(237, 169, 21,1) 20.176470588235293%,rgba(236, 168, 21,1) 20.176470588235293%,rgba(190, 0, 237,1) 80.17647058823529%);
+    border: none;
+    outline: none;
+}
+.btn:hover{
+    background-image: linear-gradient(90deg, rgba(190, 0, 237,1) 20.176470588235293%,rgba(190, 0, 236,1) 20.176470588235293%,rgba(237, 169, 21,1) 80.17647058823529%);
+}
+canvas{
+    margin-top: 300px;
+    height: 700px;
+    width: 500px;
+    border: 2px black solid;
+}
