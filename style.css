@@ -1,0 +1,89 @@
+.header{
+    font-family: 'Train One', cursive;
+    font-size: 80px;
+    
+}
+.hr-div1{
+    width: 100%;
+}
+.body{
+    height: 5000px;
+    background-color: gainsboro;
+    width: 90%;
+    margin-left: 100px;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+.test-area{
+    height: 850px;
+    background-color: white;
+    width: 70%;
+    margin-left: 180px;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 5px 5px 20px rgb(102, 98, 98);
+}
+.ta-header{
+    margin-left: 20px;
+    font-size: 45px;
+    font-family: 'New Tegomin', serif;
+    color: blue;
+}
+.ta-result{
+    margin-left: 20px;
+    font-size: 25px;
+    font-family: 'New Tegomin', serif;   
+}
+.ta-final{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-left: 40px;
+    color: red;
+}
+.result{
+    font-family: 'Indie Flower', cursive;
+    font-size: 35px;
+    margin-left: 20px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+.fr-letter{
+    color: rgb(179, 170, 170);
+    font-size: 5rem;
+    margin-right: 10px;
+
+}
+.fr-letter:hover{
+    color: #1b03a3;
+    text-shadow: 0pc 0px 5px #1b03a3;
+}
+.fr-txt{
+    font-size: 30px;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    font-family: 'Shadows Into Light', cursive;
+    margin-top: 50px;
+}
+.fr-txt2{
+    font-size: 40px;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    font-family: 'Shadows Into Light', cursive;
+    margin-top: 50px;
+}
+/* scrollbar style */
+ ::-webkit-scrollbar{
+     width: 20px;
+     background-color: black;
+     border-radius: 20px;
+     background-color: gainsboro;
+     box-shadow: inset 0px 0px 10px gray;
+ }
+ ::-webkit-scrollbar-thumb{
+     background-color: dimgray;
+     border-radius: 20px;
+     box-shadow: inset 4px 4px 4px rgb(73, 72, 72),
+                 inset -4px -4px 4px rgb(129, 127, 127)
+ }
