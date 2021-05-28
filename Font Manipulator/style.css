@@ -1,0 +1,116 @@
+body{
+    background-color: #f6f6f8;
+}
+.heading{
+    position: sticky;
+    top: 0;
+    z-index: 9999999999999;
+    background-color: #e3e3e3;
+    padding-top: 20;
+    margin: 0;
+    color: black;
+    font-size: 60px;
+    font-family: 'Amatic SC', cursive;
+    color: #c60021;
+    user-select: none;
+}
+.sub-heading{
+    font-weight: 100;
+    font-family: 'Amatic SC', cursive;
+    margin-top: 30px;
+    font-size: 40px;
+    user-select: none;
+}
+.note{
+    z-index: 9999;
+    position: absolute;
+    top: 50px;
+    width: 10px;
+    height: 100px;
+    display: grid;
+    align-self: right;
+    justify-self: right;
+    background-color: #e3e3e3;
+    margin-top: 700px;
+    padding: 30px;
+    transition: 0.5s;
+}
+.note p{
+    opacity: 0;
+    transition: 0.5s;
+    font-size: 1px;
+    z-index: 9999;
+}
+.note p:hover{
+    display: block;
+    opacity: 1;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.note:hover{
+    transition: 0.2s;
+    width: 1000px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.creator{
+    margin-top: 200px;
+    background-color: #b7b7b7;
+    padding: 20px;
+    font-size: 45px;
+    color: white;
+    font-family: 'Amatic SC', cursive;
+}
+canvas{
+    border: white solid 10px;
+    border-radius: 10px;
+}
+.txt-div{
+    border: black solid 2px;
+    width: 90%;
+    height: 150px;
+    font-size: 30px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin-top: 700px;
+}
+.txt{
+    outline: none;
+    width: 700px;
+    height: 80px;
+    padding-left: 20px;
+    font-weight: 700;
+    font-style: oblique;
+    background-color: #ff8f8f;
+    border: 3px white solid;
+    color: white;
+}
+.set-btn{
+    outline: none;
+    margin-top: 20px;
+    height: 70px;
+    width: 300px;
+    border-radius: 0%;
+    border: none;
+    border: 2px solid rgb(250, 118, 118);
+    border-bottom:  5px solid rgb(250, 118, 118);
+    background-color: white;
+    color: rgb(250, 118, 118);
+    font-size: 30px;
+    letter-spacing: 5px;
+    transition: 0.01s;
+}
+.set-btn:hover{
+    transition: 0.2s;
+    border: 2px solid rgb(96, 73, 73);
+    border-bottom:  5px solid rgb(96, 73, 73);
+    background-color: rgb(255, 249, 249);
+    color: rgb(96, 73, 73);
+}
+.set-btn:active{
+    transition: 0.01s;
+    border-bottom:  2px solid rgb(96, 73, 73);
+}
