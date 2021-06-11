@@ -1,0 +1,127 @@
+.heading{
+    background-color: rgb(255, 179, 0);
+    color: white;
+    margin-top: 0%;
+    font-size: 35px;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    font-weight: 700;
+    z-index: 999;
+    transition: 0.5s;
+}
+.heading:hover{
+    background-color: rgb(255, 149, 0);
+    box-shadow: inset 2px 2px 10px rgb(65, 65, 65);
+}
+.heading span{
+    font-size: 25px;
+    color: black;
+    font-weight: 300;
+}
+body{
+    background-image: url("https://i.gifer.com/origin/55/554818561cbf36d813ef2010cc9d66cc.gif");
+    background-size: cover;
+}
+.speed_div{
+    float: left;
+}
+.speed_div_img1{
+    width: 100px;
+    margin: 20px;
+}
+.speed_div_img2{
+    width: 200px;
+    margin: 20px;
+}
+#btnSpeed{
+    font-size: 20px;
+}
+.volume_div{
+    float: right;
+}
+.volume_div_img1{
+    width: 100px;
+    margin: 20px;
+}
+.volume_div_img2{
+    width: 200px;
+    margin: 20px;
+}
+#btnVolume{
+    font-size: 20px;
+}
+.footer{
+    background-color: rgb(255, 191, 0);
+    padding: 30px;   
+    position: sticky;
+    margin-top: 800px;
+    font-size: 30px;
+    color: white;
+    transition: 0.5s;
+}
+.footer:hover{
+    background-color: rgb(255, 149, 0);
+    box-shadow: inset 2px 2px 10px rgb(65, 65, 65);
+}
+.play-button{
+    font-size: 30px;
+    height: 80px;
+    width: 200px;
+    letter-spacing: 5px;
+    border: 5px solid rgb(0, 255, 30);
+    background-color: rgb(0, 255, 30);
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+canvas{
+    border: white solid 10px;
+    border-radius: 10px;
+}
+.stop-button{
+    font-size: 30px;
+    height: 80px;
+    width: 200px;
+    letter-spacing: 5px;
+    border: 5px solid rgb(255, 225, 0);
+    background-color: rgb(255, 225, 0);
+    border-radius: 5px;
+    outline: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.next-button{
+    font-size: 30px;
+    height: 80px;
+    width: 200px;
+    letter-spacing: 5px;
+    border: 5px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    outline: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.prev-button{
+    font-size: 30px;
+    height: 80px;
+    width: 200px;
+    letter-spacing: 5px;
+    border: 5px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    outline: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.next-button:hover{
+    color: white;
+}
+.prev-button:hover{
+    color: white;
+}
