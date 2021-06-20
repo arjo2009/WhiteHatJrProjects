@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(0, 96, 250);
+}
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #101010;
+}
+.inner-header{
+    background-color: red;
+    height: 100%;
+    width: 800px;
+    margin: 0 auto;
+    transition: 1.5s;
+}
+.inner-header:hover{
+    transition: 1s;
+    width: 1000px;
+}
+.inner-header:active{
+    transition: 1s;
+    width: 100%;
+}
+.logo-cnt{
+    width: 100%;
+    display: table;
+    height: 100%;
+    text-align: center;
+    transition: 1s;
+}
+.logo-cnt h1{
+    display: table-cell;
+    height: 100%;
+    color: white;
+    vertical-align: middle;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 550;
+}
+.logo-cnt h1 span{
+    font-weight: 900;
+}
+/* banner style */
+.banner{
+    box-shadow: 0px 0px 20px rgb(75, 73, 73);
+    border-radius: 10px;
+    width: 0px;
+    height:  0px;
+    margin-left: 150px;
+    margin-top: 100px;
+    background-image: url("https://cdn.dribbble.com/users/754943/screenshots/2761885/dribbble-filter.gif");
+    background-size: contain;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    margin-bottom: 20px;
+}
+  
+@keyframes fadeInAnimation {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 500px;
+        height: 400px;
+    }
+}
+.banner-txt{
+    line-height: 80px;
+    color: white;
+    font-weight: 200;
+    position: absolute;
+    top: 250px;
+    left: 750px;
+    font-size: 50px;
+    line-break: strict;
+    font-family: 'Playfair Display', serif;
+    transform: translateX(800px);
+    animation: rightFloatAnimation 1s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes rightFloatAnimation {
+    0% {
+        transform: translateX(800px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.dwn-btn{
+    opacity: 0;
+    animation: fadeIn 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    outline: none;
+    color: white;
+    top: 500px;
+    position: absolute;
+    left: 1200px;
+    font-size: 80px;
+    padding: 10px;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    border: none;
+    background-image: linear-gradient(178.66429048262557deg, rgba(243, 72, 104,1) 1.2532920966495316%,rgba(242, 71, 104,1) 1.2520297289059932%,rgba(158, 0, 236,1) 87.2053060192747%,rgba(158, 0, 236,1) 87.20404365153118%);
+}
+.dwn-btn i{
+    animation: shakeAnimation 2s infinite;
+}
+@keyframes shakeAnimation {
+    0% {
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.webcam-div{
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 40%;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    transition: 0.5s;
+    animation: fadeInNxt 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.webcam-div:hover{
+    box-shadow: 5px 5px 30px rgb(48, 46, 46);
+}
+canvas{
+    margin-top: 400px;
+    animation: fadeInNxt 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.filter-div{
+   display: grid;
+   align-content: center;
+   justify-content: center;
+}
+.snapshot{
+    width: 300px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #538fbe;
+    padding: 20px 70px;
+    font-size: 24px;
+    border: 1px solid #2d6898;
+    margin-bottom: 50px;
+    outline: none;
+    border-radius: 5px;
+    background-image: linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4);
+}
+.snapshot:hover {
+    background-image: linear-gradient(bottom, rgb(79,142,191) 0%, rgb(102,166,214) 100%);
+}
+.snapshot:active{
+    box-shadow: 0px 2px 0px #2b638f, 0px 1px 6px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
