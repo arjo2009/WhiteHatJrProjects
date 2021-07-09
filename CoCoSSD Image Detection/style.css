@@ -1,0 +1,14 @@
+body{
+    background-image: linear-gradient(110.01305069999898deg, rgba(249, 123, 92,1) 6.263821560269603%,rgba(176, 77, 230,1) 95.28102957952002%);
+}
+.opt-btn{
+    height: 50px;
+    width: 250px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: none;
+    font-size: 20px;
+    letter-spacing: 5px;
+    background-color: white;
+}
