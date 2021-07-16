@@ -1,0 +1,43 @@
+<html>
+<head>
+
+	<title>AI Video Surveillance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<center>
+  <div class="heading" id="heading">
+    <label class="heading-txt" onclick="expand()">AI VIDEO SURVEILLANCE</label>
+    <div id="subHeading" class="sub-heading">
+      <img id="headingImg" class="img" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3d6d22105459531.5f918f1f20af0.gif">
+    <label id="headingLabel" class="label">An AI Video Surveillance Webapp,<br> which identifies obejects in a video input.<br> The model used here is CoCoSSD which<br> is trained with billions of images.</label>
+    </div>
+  </div>
+  <div>
+    <button class="start" onclick="start()">START</button>
+    <button class="start" id="status"></button>
+    <button class="start" id="objectNumber"></button>
+    <button class="start" id="personDetected"></button>
+  </div>
+  <div class="footer">
+    DEVELOPED BY ABHIMANYU MUKHERJEE
+  </div>
+</center>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>
