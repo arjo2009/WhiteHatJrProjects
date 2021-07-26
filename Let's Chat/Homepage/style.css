@@ -1,0 +1,320 @@
+body{
+    background: dodgerblue;
+    user-select: none;
+}
+/*neon text*/
+.wrapper{
+    background:linear-gradient(180.03456969444676deg, rgba(0, 0, 0,1) -3.493767296508408%,rgba(0, 0, 0,1) 79.72559021533031%,rgba(30, 144, 255,1) 88.33448926827913%);
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.txt{
+    text-transform: uppercase;
+    font-size: 100px;
+    letter-spacing: 20px;
+    word-spacing: 80px;
+    color: white;
+    background-color: black;
+}
+.txt::before{
+    content: 'LETS CH@T';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(3px);
+    
+}
+.neon-wrapper{
+    filter: brightness(400%);
+    display: inline-flex;
+
+}
+.gradient{
+    background: linear-gradient(90deg, rgba(243, 72, 104,1) 20.328125854333244%,rgba(242, 71, 104,1) 20.328125854333244%,rgba(158, 0, 236,1) 80.32812823851904%);   
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    mix-blend-mode: multiply;
+}
+/*username and email css*/
+.name-div{
+    max-width: 480px;
+    max-height: 500px;
+    padding: 60px 35px 35px 35px;
+    margin-bottom: 100px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    background: #ecf0f3;
+    box-shadow: 13px 13px 20px rgb(0, 0, 0, 0.2);
+}
+.name-div span{
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: black;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 20px 20px 20px 20px;
+    
+}
+.User-name, .User-email{
+    margin-bottom: 30px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #ffffff;
+}
+/*wave effect css*/
+.bodyContainer{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: dodgerblue;
+    padding: 0;
+    margin: 0;
+}
+.bodyContainer .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+.bodyContainer .wave.wave1{
+    animation: animate1 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+@keyframes animate1{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+.bodyContainer .wave.wave2{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+@keyframes animate2{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
+.bodyContainer .wave.wave3{
+    animation: animate3 15s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+@keyframes animate3{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+.bodyContainer .wave.wave4{
+    animation: animate4 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -2s;
+    bottom: 20;
+}
+@keyframes animate4{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
+/*output css*/
+
+
+/*form btn css*/
+.text-wrapper{
+    height: 10vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: consolas;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #39FF14;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 44px;
+    overflow: hidden;
+    transition: 0.2s;
+    text-decoration: none;
+}
+ a:hover{
+    text-decoration: none;
+    color: #255784;
+    background-color: #39FF14;
+    box-shadow: 0 0 10px #39FF14, 0 0 40px #39FF14, 0 0 100px #39FF14;
+    transition-delay:1s ;
+} 
+a:active{
+    text-decoration: none;
+}
+a:-moz-drag-over{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a span{
+    position: absolute;
+    display: block;    
+}
+a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#39FF14 );
+}
+a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg, transparent,#39FF14 );
+}
+a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,#39FF14 );
+}
+a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent,#39FF14 );
+}
+a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+/*room input*/
+.input-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.form{
+    width: 50%;
+    position: relative;
+    height: 100px;
+    background: blue;
+}
+.form input{
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    color: #1b03a3;
+    background: dodgerblue;
+    padding-top: 55px;
+    border: none;
+    outline: none;
+}
+.form label{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+.form label::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    bottom: -1px;
+    border-bottom: 3px solid #1b03a3;
+    transform: translateX(-100%);
+    transition: all 0.3s ease; 
+}
+.content-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+.form input:focus + .label-name .content-name, .form input:valid + .label-name .content-name{
+    transform: translateY(-100%);
+    text-transform: uppercase;
+    color: #1b03a3;
+    font-size: 25px;
+}
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after{
+    transform: translateX(0%);
+}
+/*create*/
+.create{
+    font-size: 20px;
+    outline: none;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    border: none;
+    height: 60px;
+    width: 550px;
+    box-shadow: inset -8px -8px 8px #87878b,
+                inset 8px -8px 8px #ffffff;
+}
+.create:active{
+    box-shadow: none;
+}

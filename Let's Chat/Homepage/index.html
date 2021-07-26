@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LET'S CHAT</title><link rel="icon" href="icon.png">
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="homepage.css">
+<script src="homepage.js"></script>
+</head>
+<body onload="load()">
+  <div class="wrapper">
+    <div class="neon-wrapper">
+      <span class="txt">LETS CH@T</span>
+      <span class="gradient"></span>
+    </div>
+  </div>
+  <center>
+    <div class="name-div">
+      <span class="User-name" id="UserName"></span><br><br><br><br><br>
+      <span class="User-email" id="UserEmail"></span>
+    </div>
+  </center>
+  <div class="input-wrapper">
+    <h2>CREATE ROOM</h2><br><br>
+    <div class="form">
+      <input type="text" name="name" required autocomplete="off" id="room_name">
+      <label for="name" class="label-name">
+        <span class="content-name">Name</span>
+      </label>
+    </div>
+  </div>
+   <center><button class="create" onclick="createRoom()">CREATE</button></center>
+
+  <center><div id="output" class="output">ROOM NAMES<hr style="color: black;"></div><div id="output"></div></center><br><br>
+  <div class="text-wrapper"><a href="profile form.html">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    PROFILE FORM
+  </a></div>
+  <div class="bodyContainer">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+    <div class="wave wave4"></div>
+  </div><br><br>
+  
+</body>
+</html>
