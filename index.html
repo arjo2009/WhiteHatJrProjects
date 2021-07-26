@@ -1,140 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Case Study - Mobilenet & Wolfram</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
 
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="//www.wolframcdn.com/consent/cookie-consent.js" defer="defer" async="async"></script>
-    <script src="main.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="profile form.css">
+<script src="profile form.js"></script>
+<link href='https://css.gg/redo.css' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Profile Form</title>
 </head>
-<body onload="identify()">
-    
-    <div class="head">
-        <center>
-            <label class="header"><img src="logo.svg" class="logo" style="height: 50px; width: 50px;margin-right: 50px;">CASE STUDY<img src="logo.svg" style="height: 50px; width: 50px;margin-left: 50px;" class="logo" ></h1>
-        </center>        
-    </div>    
-    <hr style="height: 5px;width: 90%;background-color: black;">
-    <div class="body">
-        <br><br>
-        <div class="test-area">
-            <br>
-            <label class="ta-header" style="letter-spacing: 15px;margin-bottom: 50px;">TEST IMAGE - </label>
-            <img id="testImg1" src="water bottl.jpg" style="margin-left: 150px;width: 500px;height: 500px;">
-            <hr style="width: 95%;height: 1px;background-color: black;">
-            <div class="results">
-                <label class="ta-result">Output on Mobilenet model - </label><span id="mnResult1" class="result"></span><br>
-                <label class="ta-result">Output on Google Lens - </label><span id="wmResult1" class="result">PUMA Stainless Steel Bottle</span>
+<body>
+        <p data-toggle="modal" data-target="#mark">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Open Form
+        </p>
+        <div class="modal fade" id="mark" style="z-index: 9999;">
+            <div class="modal-dialog">
+                <!--modal-content-->
+                <div class="modal-content" style="background-color: black;">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dimiss="modal"></button>
+                        <h4 class="modal-title" style="color: white;">PROFILE FORM</h4>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <center>
+                            <div id="avatarcontainer">
+                                <span class="description-heading">CHOOSE YOUR AVATAR</span>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHnPmUvFLjjmoYWAbLTEmLLIRCPpV_OgxCVA&usqp=CAU" style="border-radius: 50%;" id="avatar"><br>
+                            </div>
+                        </center>
+                            <img src="up-arrow.png" id="openImg" onclick="show()">
+                            <div id="options">
+                                <img src="Images/boy.png" class="avt-icon" id="avt-icon1" onclick="select1()">
+                                <img src="Images/boy 2.png" class="avt-icon" id="avt-icon2" onclick="select2()">
+                                <img src="Images/girl.png" class="avt-icon" id="avt-icon3" onclick="select3()">
+                                <img src="Images/girl 2.png" class="avt-icon" id="avt-icon4" onclick="select4()">
+                                <img src="Images/man.png" class="avt-icon" id="avt-icon5" onclick="select5()">
+                                <img src="Images/man1.png" class="avt-icon" id="avt-icon6" onclick="select6()">
+                                <img src="Images/woman.png" class="avt-icon" id="avt-icon7" onclick="select7()">
+                                <img src="Images/woman 1.png" class="avt-icon" id="avt-icon8" onclick="select8()">
+                            </div>
+                            <center>
+                                <span class="description-heading">YOUR DESCRIPTION</span>
+                            </center>
+                            <br><br>      
+                            <span contenteditable="true" id="description">ABC XYZ</span><button style="background-color: black; border: none; outline: none;" onclick="refreshdes()"><img src="refresh.png" style="background-color: black; height: 50px; width: 50px;"></button>
+                            <center>
+                                <span class="description-heading">YOUR HOBBY</span>
+                            </center>
+                            <br><br>      
+                            <span contenteditable="true" id="description2">ABC XYZ</span><button style="background-color: black; border: none; outline: none;" onclick="refreshdes2()"><img src="refresh.png" style="background-color: black; height: 50px; width: 50px;"></button>      
+                            <center>
+                                <div class="save-container">
+                                    <div class="btn" onclick="save()"><img class="icon" src="save.svg"></div>
+                                    <div class="txt">SAVE</div>
+                                </div>  
+                            </center>   
+                    </div>
+                </div>
             </div>
-            <div class="final-result">
-                <label class="ta-final">GOOGLE LENS IS MORE ACCURATE</label>
-            </div>
-        </div>
-        <div class="test-area">
-            <br>
-            <label class="ta-header" style="letter-spacing: 15px;margin-bottom: 50px;">TEST IMAGE - </label>
-            <img id="testImg2" src="bed.jpg" style="margin-left: 40px;width: 800px;height: 500px;">
-            <hr style="width: 95%;height: 1px;background-color: black;">
-            <div class="results">
-                <label class="ta-result">Output on Mobilnet model - </label><span id="mnResult2" class="result"></span><br>
-                <label class="ta-result">Output on Google Lens - </label><span id="wmResult1" class="result">Hydraulics Bed</span>
-            </div>
-            <div class="final-result">
-                <label class="ta-final">GOOGLE LENS IS MORE ACCURATE</label>
-            </div>
-        </div>
-        <div class="test-area">
-            <br>
-            <label class="ta-header" style="letter-spacing: 15px;margin-bottom: 50px;">TEST IMAGE - </label>
-            <img id="testImg3" src="birs.jpg" style="margin-left: 40px;width: 800px;height: 500px;">
-            <hr style="width: 95%;height: 1px;background-color: black;">
-            <div class="results">
-                <label class="ta-result">Output on Mobilenet model - </label><span id="mnResult3" class="result"></span><br>
-                <label class="ta-result">Output on Google Lens - </label><span id="wmResult1" class="result">peafowl</span>
-            </div>
-            <div class="final-result">
-                <label class="ta-final">MOBILENET IS MORE ACCURATE</label>
-            </div>
-        </div>
-        <div class="test-area">
-            <br>
-            <label class="ta-header" style="letter-spacing: 15px;margin-bottom: 50px;">TEST IMAGE - </label>
-            <img id="testImg4" src="headpjones.jpg" style="margin-left: 150px;width: 500px;height: 500px;">
-            <hr style="width: 95%;height: 1px;background-color: black;">
-            <div class="results">
-                <label class="ta-result">Output on Mobilenet model - </label><span id="mnResult4" class="result"></span><br>
-                <label class="ta-result">Output on Google Lens - </label><span id="wmResult1" class="result">MI Super Bass Headphones</span>
-            </div>
-            <div class="final-result">
-                <label class="ta-final">GOOGLE LENS IS MORE ACCURATE</label>
-            </div>
-        </div>
-        <div class="test-area">
-            <br>
-            <label class="ta-header" style="letter-spacing: 15px;margin-bottom: 50px;">TEST IMAGE - </label>
-            <img id="testImg5" src="shoes.jfif" style="margin-left: 150px;width: 300px;height: 300px;">
-            <hr style="width: 95%;height: 1px;background-color: black;">
-            <div class="results">
-                <label class="ta-result">Output on Mobilenet model - </label><span id="mnResult5" class="result"></span><br>
-                <label class="ta-result">Output on Google Lens - </label><span id="wmResult1" class="result">Men's Running Shoes</span>
-            </div>
-            <div class="final-result">
-                <label class="ta-final">GOOGLE LENS IS MORE ACCURATE</label>
-            </div>
-        </div>
-        <center>
-            <div class="final-result" style="margin-top: 100px;">
-                <label class="fr-letter">G</label>
-                <label class="fr-letter">O</label>
-                <label class="fr-letter">O</label>
-                <label class="fr-letter">G</label>
-                <label class="fr-letter">L</label>
-                <label class="fr-letter" style="margin-right: 30px;">E</label>
-                <label class="fr-letter"> </label>
-                <label class="fr-letter">L</label>
-                <label class="fr-letter">E</label>
-                <label class="fr-letter">N</label>
-                <label class="fr-letter" style="margin-right: 30px;">S</label>
-                <label class="fr-letter"> </label>
-                <label class="fr-letter">I</label>
-                <label class="fr-letter" style="margin-right: 30px;">S</label>
-                <label class="fr-letter"> </label>
-                <label class="fr-letter">M</label>
-                <label class="fr-letter">O</label>
-                <label class="fr-letter">R</label>
-                <label class="fr-letter" style="margin-right: 30px;">E</label>
-                <label class="fr-letter"> </label>
-                <label class="fr-letter">A</label>
-                <label class="fr-letter">C</label>
-                <label class="fr-letter">C</label>
-                <label class="fr-letter">U</label>
-                <label class="fr-letter">R</label>
-                <label class="fr-letter">A</label>
-                <label class="fr-letter">T</label>
-                <label class="fr-letter">E</label>
-                <label class="fr-txt">I have tested 5 images and Google Lens has guessed 4 of them more accurately and wolfram has guesssed 1 more accurately.</label><br>
-                <label class="fr-txt2"> According to this data Google Lens is better.</label>
-            </div>
-        </center>         
-    </div>
+        </div>  
 </body>
 </html>

@@ -1,59 +1,119 @@
-classifier = ml5.imageClassifier('MobileNet', modelLoaded);
-function modelLoaded(){
-    console.log("Model Loaded!");
-}
-
-function identify(){
-    img1 = document.getElementById("testImg1");
-    img2 = document.getElementById("testImg2");
-    img3 = document.getElementById("testImg3");
-    img4 = document.getElementById("testImg4");
-    img5 = document.getElementById("testImg5");
-    classifier.classify(img1, gotResultmn1);
-    classifier.classify(img2, gotResultmn2);
-    classifier.classify(img3, gotResultmn3);
-    classifier.classify(img4, gotResultmn4);
-    classifier.classify(img5, gotResultmn5);
-}
-
-
-function gotResultmn1(error, results){
-    if(error){
-        console.log(error);
+avatar = "";
+display = 0
+function show(){
+    if(display == 0){
+        document.getElementById("openImg").style.transform = "rotate(180deg)";
+        document.getElementById("options").style.display = "block";        
+        display = display + 1;
     }else{
-        console.log(results);
-        document.getElementById("mnResult1").innerHTML = results[0].label
-    }
+        document.getElementById("openImg").style.transform = "rotate(0deg)";
+        document.getElementById("options").style.display = "none";        
+        display = display - 1;
+    }    
 }
-function gotResultmn2(error, results){
-    if(error){
-        console.log(error);
-    }else{
-        console.log(results);
-        document.getElementById("mnResult2").innerHTML = results[0].label
-    }
+function select1(){
+    avatar = "Images/boy.png";
+    document.getElementById("avatar").src = "Images/boy.png";
+    document.getElementById("avt-icon2").style.border = "none";
+    document.getElementById("avt-icon3").style.border = "none";
+    document.getElementById("avt-icon4").style.border = "none";
+    document.getElementById("avt-icon5").style.border = "none";
+    document.getElementById("avt-icon6").style.border = "none";
+    document.getElementById("avt-icon7").style.border = "none";
+    document.getElementById("avt-icon8").style.border = "none";
+    document.getElementById("avt-icon1").style.border = "2px solid white";
 }
-function gotResultmn3(error, results){
-    if(error){
-        console.log(error);
-    }else{
-        console.log(results);
-        document.getElementById("mnResult3").innerHTML = results[0].label
-    }
+function select2(){
+    avatar = "Images/boy 2.png";
+    document.getElementById("avatar").src = "Images/boy 2.png";
+    document.getElementById("avt-icon1").style.border = "none";
+    document.getElementById("avt-icon3").style.border = "none";
+    document.getElementById("avt-icon4").style.border = "none";
+    document.getElementById("avt-icon5").style.border = "none";
+    document.getElementById("avt-icon6").style.border = "none";
+    document.getElementById("avt-icon7").style.border = "none";
+    document.getElementById("avt-icon8").style.border = "none";
+    document.getElementById("avt-icon2").style.border = "2px solid white";
 }
-function gotResultmn4(error, results){
-    if(error){
-        console.log(error);
-    }else{
-        console.log(results);
-        document.getElementById("mnResult4").innerHTML = results[0].label
-    }
+function select3(){
+    avatar = "Images/girl.png";
+    document.getElementById("avatar").src = "Images/girl.png";
+    document.getElementById("avt-icon2").style.border = "none";
+    document.getElementById("avt-icon1").style.border = "none";
+    document.getElementById("avt-icon4").style.border = "none";
+    document.getElementById("avt-icon5").style.border = "none";
+    document.getElementById("avt-icon6").style.border = "none";
+    document.getElementById("avt-icon7").style.border = "none";
+    document.getElementById("avt-icon8").style.border = "none";
+    document.getElementById("avt-icon3").style.border = "2px solid white";
 }
-function gotResultmn5(error, results){
-    if(error){
-        console.log(error);
-    }else{
-        console.log(results);
-        document.getElementById("mnResult5").innerHTML = results[0].label
-    }
+function select4(){
+    avatar = "Images/girl 2.png";
+    document.getElementById("avatar").src = "Images/girl 2.png";
+    document.getElementById("avt-icon2").style.border = "none";
+    document.getElementById("avt-icon3").style.border = "none";
+    document.getElementById("avt-icon1").style.border = "none";
+    document.getElementById("avt-icon5").style.border = "none";
+    document.getElementById("avt-icon6").style.border = "none";
+    document.getElementById("avt-icon7").style.border = "none";
+    document.getElementById("avt-icon8").style.border = "none";
+    document.getElementById("avt-icon4").style.border = "2px solid white";
+}
+function select5(){
+    avatar = "Images/man.png";
+    document.getElementById("avatar").src = "Images/man.png";
+    document.getElementById("avt-icon2").style.border = "none";
+    document.getElementById("avt-icon3").style.border = "none";
+    document.getElementById("avt-icon4").style.border = "none";
+    document.getElementById("avt-icon1").style.border = "none";
+    document.getElementById("avt-icon6").style.border = "none";
+    document.getElementById("avt-icon7").style.border = "none";
+    document.getElementById("avt-icon8").style.border = "none";
+    document.getElementById("avt-icon5").style.border = "2px solid white";
+}
+function select6(){
+    avatar = "Images/man1.png";
+    document.getElementById("avatar").src = "Images/man1.png";
+    document.getElementById("avt-icon2").style.border = "none";
+    document.getElementById("avt-icon3").style.border = "none";
+    document.getElementById("avt-icon4").style.border = "none";
+    document.getElementById("avt-icon5").style.border = "none";
+    document.getElementById("avt-icon1").style.border = "none";
+    document.getElementById("avt-icon7").style.border = "none";
+    document.getElementById("avt-icon8").style.border = "none";
+    document.getElementById("avt-icon6").style.border = "2px solid white";
+}
+function select7(){
+    avatar = "Images/woman.png";
+    document.getElementById("avatar").src = "Images/woman.png";
+    document.getElementById("avt-icon2").style.border = "none";
+    document.getElementById("avt-icon3").style.border = "none";
+    document.getElementById("avt-icon4").style.border = "none";
+    document.getElementById("avt-icon5").style.border = "none";
+    document.getElementById("avt-icon6").style.border = "none";
+    document.getElementById("avt-icon1").style.border = "none";
+    document.getElementById("avt-icon8").style.border = "none";
+    document.getElementById("avt-icon7").style.border = "2px solid white";
+}
+function select8(){
+    avatar = "Images/woman 1.png";
+    document.getElementById("avatar").src = "Images/woman 1.png";
+    document.getElementById("avt-icon2").style.border = "none";
+    document.getElementById("avt-icon3").style.border = "none";
+    document.getElementById("avt-icon4").style.border = "none";
+    document.getElementById("avt-icon5").style.border = "none";
+    document.getElementById("avt-icon6").style.border = "none";
+    document.getElementById("avt-icon7").style.border = "none";
+    document.getElementById("avt-icon1").style.border = "none";
+    document.getElementById("avt-icon8").style.border = "2px solid white";
+}
+function refreshdes(){
+    document.getElementById("description").innerHTML = "ABC XYZ";
+}
+function refreshdes2(){
+    document.getElementById("description2").innerHTML = "ABC XYZ";
+}
+function save(){
+    alert("Your Profile Has Been Saved!😎");
+    localStorage.setItem("avatar", avatar)
 }
