@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="profile form.css">
+<script src="profile form.js"></script>
+<link href='https://css.gg/redo.css' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Profile Form</title>
+</head>
+<body>
+        <p data-toggle="modal" data-target="#mark">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Open Form
+        </p>
+        <div class="modal fade" id="mark" style="z-index: 9999;">
+            <div class="modal-dialog">
+                <!--modal-content-->
+                <div class="modal-content" style="background-color: black;">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dimiss="modal"></button>
+                        <h4 class="modal-title" style="color: white;">PROFILE FORM</h4>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <center>
+                            <div id="avatarcontainer">
+                                <span class="description-heading">CHOOSE YOUR AVATAR</span>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHnPmUvFLjjmoYWAbLTEmLLIRCPpV_OgxCVA&usqp=CAU" style="border-radius: 50%;" id="avatar"><br>
+                            </div>
+                        </center>
+                            <img src="up-arrow.png" id="openImg" onclick="show()">
+                            <div id="options">
+                                <img src="Images/boy.png" class="avt-icon" id="avt-icon1" onclick="select1()">
+                                <img src="Images/boy 2.png" class="avt-icon" id="avt-icon2" onclick="select2()">
+                                <img src="Images/girl.png" class="avt-icon" id="avt-icon3" onclick="select3()">
+                                <img src="Images/girl 2.png" class="avt-icon" id="avt-icon4" onclick="select4()">
+                                <img src="Images/man.png" class="avt-icon" id="avt-icon5" onclick="select5()">
+                                <img src="Images/man1.png" class="avt-icon" id="avt-icon6" onclick="select6()">
+                                <img src="Images/woman.png" class="avt-icon" id="avt-icon7" onclick="select7()">
+                                <img src="Images/woman 1.png" class="avt-icon" id="avt-icon8" onclick="select8()">
+                            </div>
+                            <center>
+                                <span class="description-heading">YOUR DESCRIPTION</span>
+                            </center>
+                            <br><br>      
+                            <span contenteditable="true" id="description">ABC XYZ</span><button style="background-color: black; border: none; outline: none;" onclick="refreshdes()"><img src="refresh.png" style="background-color: black; height: 50px; width: 50px;"></button>
+                            <center>
+                                <span class="description-heading">YOUR HOBBY</span>
+                            </center>
+                            <br><br>      
+                            <span contenteditable="true" id="description2">ABC XYZ</span><button style="background-color: black; border: none; outline: none;" onclick="refreshdes2()"><img src="refresh.png" style="background-color: black; height: 50px; width: 50px;"></button>      
+                            <center>
+                                <div class="save-container">
+                                    <div class="btn" onclick="save()"><img class="icon" src="save.svg"></div>
+                                    <div class="txt">SAVE</div>
+                                </div>  
+                            </center>   
+                    </div>
+                </div>
+            </div>
+        </div>  
+</body>
+</html>
